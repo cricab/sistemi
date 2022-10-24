@@ -1,0 +1,16 @@
+int luminosita; //Il valore letto dalla fotoresistenza
+int ledPin = 10; //Il pin del led
+int ledPin2 = 11;
+void setup() {
+}
+
+void loop() {
+luminosita = analogRead(A0);
+luminosita = luminosita/4;
+analogWrite(ledPin,luminosita);
+delay(10);
+luminosita = analogRead(A0);
+luminosita = luminosita/4;
+analogWrite(ledPin2,luminosita);
+delay(10);
+}
